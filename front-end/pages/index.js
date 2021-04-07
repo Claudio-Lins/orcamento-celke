@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 
 export default function Home
 () {
@@ -36,8 +39,8 @@ export default function Home
         <div className="flex justify-evenly mt-8 items-center">
           {/* Serviços */}
           <div className="w-[30%]">
-            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-10 mx-auto">
-              A
+            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-12 mx-auto">
+              <FontAwesomeIcon className='w-14 mx-auto' icon='laptop-code' />
             </div>
             <h3 className="text-2xl font-base mt-2">Serviço Um</h3>
             <p className="font-light">
@@ -47,8 +50,8 @@ export default function Home
           {/*  */}
           {/* Serviços */}
           <div className="w-[30%]">
-            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-10 mx-auto">
-              B
+            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] pt-10 mx-auto">
+            <FontAwesomeIcon className='w-10 mx-auto' icon='mobile-alt' />
             </div>
             <h3 className="text-2xl font-base mt-2">Serviço Dois</h3>
             <p className="font-light">
@@ -58,8 +61,8 @@ export default function Home
           {/*  */}
           {/* Serviços */}
           <div className="w-[30%]">
-            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-10 mx-auto">
-              C
+            <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-12 mx-auto">
+            <FontAwesomeIcon className='w-12 mx-auto' icon='network-wired' />
             </div>
             <h3 className="text-2xl font-base mt-2">Serviço Três</h3>
             <p className="font-light">
