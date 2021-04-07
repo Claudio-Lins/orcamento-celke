@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Orcamento() {
+export default function Home
+() {
   return (
     <div className="py-16">
       <Head>
