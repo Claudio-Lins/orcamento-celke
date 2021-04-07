@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Orcamento() {
   return (
-    <div className="pt-16">
+    <div className="py-16">
       <Head>
         <title>Orçamento</title>
         <link rel="icon" href="/favicon.ico" />
