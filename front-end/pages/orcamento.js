@@ -9,6 +9,12 @@ export default function Orcamento() {
     projeto: "",
   });
 
+  const [response, setResponse] = useState({
+    formSave: false,
+    type: '',
+    message: ''
+  })
+
   const onChangeInput = (e) =>
     setOrcamento({ ...orcamento, [e.target.name]: e.target.value });
 
@@ -25,12 +31,21 @@ export default function Orcamento() {
       const responseEnv = await res.json();
 
       if (responseEnv.error) {
-        alert(responseEnv.message);
+        setResponse({
+          type: 'error',
+          message: responseEnv.message
+        })
       } else {
-        alert(responseEnv.message);
+        setResponse({
+          type: 'succes',
+          message: responseEnv.message
+        })
       }
     } catch (err) {
-      alert("Dados NÃO enviados com sucesso!");
+      setResponse({
+        type: 'error',
+        message: "Dados NÃO enviados com sucesso!"
+      })
     }
   };
 
@@ -39,7 +54,12 @@ export default function Orcamento() {
       <div className="py-16 bg-blue-700 text-center text-gray-50 font-thin text-5xl">
         <h1>Orçamento</h1>
       </div>
+      <div className='flex justify-center p-4 font-light italic text-sm'>
+        <p>{response.message}</p>
+      </div>
       <section className="flex justify-center items-center w-1/3 mx-auto">
+
+
         <form
           onSubmit={sendOrcamento}
           className="py-4 min-w-full p-4 mt-4 space-y-5 rounded-lg shadow-md justify-start"
