@@ -50,7 +50,7 @@ app.post('/home', async (req, res) => {
         'topTextoBtn': 'Orçamento',
         'topLinkBtn': '/orcamento',
         'serTitulo': 'Serviços',
-        'serSubyitulo': 'Lorem Ipsum is simply dummy text of the printing industry.',
+        'serSubTitulo': 'Lorem Ipsum is simply dummy text of the printing industry.',
         'serUmIcone': 'laptop-code',
         'serUmTitulo': 'Serviço Um',
         'serUmDesc': 'Lorem Ipsum is simply dummy text of the printing industry.',

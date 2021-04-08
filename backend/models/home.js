@@ -18,7 +18,7 @@ const home = new Schema({
     serTitulo: {
         type: String
     },
-    serSubyitulo: {
+    serSubTitulo: {
         type: String
     },
 
