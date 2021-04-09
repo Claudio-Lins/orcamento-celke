@@ -19,6 +19,11 @@ export default function Navbar() {
           <a>Contacto</a>
         </Link>
       </div>
+      <div className='hover:bg-blue-300 hover:text-blue-800 hover:font-bold py-6 px-4'>
+        <Link href="/cms">
+          <a>CMS</a>
+        </Link>
+      </div>
     </div>
   );
 }
