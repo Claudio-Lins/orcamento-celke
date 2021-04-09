@@ -52,20 +52,20 @@ app.post("/home", async (req, res) => {
   const dados = {
     topTitulo: "Temos a solução que a sua empresa precisa",
     topSubtitulo:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text,",
+      "Suntitulo do TOPO",
     topTextoBtn: "Orçamento",
     topLinkBtn: "/orcamento",
     serTitulo: "Serviços",
-    serSubTitulo: "Lorem Ipsum is simply dummy text of the printing industry.",
+    serSubTitulo: "Subtitulo.",
     serUmIcone: "laptop-code",
     serUmTitulo: "Serviço Um",
-    serUmDesc: "Lorem Ipsum is simply dummy text of the printing industry.",
+    serUmDesc: "Descrição do serviço Um.",
     serDoisIcone: "mobile-alt",
     serDoisTitulo: "Serviço Dois",
-    serDoisDesc: "Lorem Ipsum is simply dummy text of the printing industry.",
-    serTresIcone: "netwok-wired",
+    serDoisDesc: "Descrição do serviço Dois.",
+    serTresIcone: "network-wired",
     serTresTitulo: "Serviço Tres",
-    serTresDesc: "Lorem Ipsum is simply dummy text of the printing industry.",
+    serTresDesc: "Descrição do serviço três.",
   };
 
   const homeExiste = await Home.findOne({});

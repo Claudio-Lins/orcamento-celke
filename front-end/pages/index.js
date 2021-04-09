@@ -38,7 +38,7 @@ export default function Home( {data} ) {
           {/* Serviços */}
           <div className="w-[30%]">
             <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-12 mx-auto">
-              <FontAwesomeIcon className='w-14 mx-auto' icon={data.home.serUmIcone} />
+              <FontAwesomeIcon className='w-[50px] mx-auto' icon={data.home.serUmIcone} />
             </div>
             <h3 className="text-2xl font-base mt-2">{data.home.serUmTitulo}</h3>
             <p className="font-light">
@@ -49,7 +49,7 @@ export default function Home( {data} ) {
           {/* Serviços */}
           <div className="w-[30%]">
             <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] pt-10 mx-auto">
-            <FontAwesomeIcon className='w-10 mx-auto' icon={data.home.serDoisIcone} />
+            <FontAwesomeIcon className='w-[30px] mx-auto' icon={data.home.serDoisIcone} />
             </div>
             <h3 className="text-2xl font-base mt-2">{data.home.serDoisTitulo}</h3>
             <p className="font-light">
@@ -60,7 +60,7 @@ export default function Home( {data} ) {
           {/* Serviços */}
           <div className="w-[30%]">
             <div className="bg-yellow-500 rounded-full h-[140px] w-[140px] text-5xl pt-12 mx-auto">
-            <FontAwesomeIcon className='w-10 mx-auto' icon={data.home.serTresIcone} />
+            <FontAwesomeIcon className='w-[50px] mx-auto' icon={data.home.serTresIcone} />
             </div>
             <h3 className="text-2xl font-base mt-2">{data.home.serTresTitulo}</h3>
             <p className="font-light">
