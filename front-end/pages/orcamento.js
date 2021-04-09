@@ -22,6 +22,8 @@ export default function Orcamento() {
     e.preventDefault();
     console.log("orcamento");
 
+    setResponse({ formSave: true })
+
     try {
       const res = await fetch("http://localhost:8080/orcamento", {
         method: "POST",
@@ -32,17 +34,20 @@ export default function Orcamento() {
 
       if (responseEnv.error) {
         setResponse({
+          formSave: false,
           type: 'error',
           message: responseEnv.message
         })
       } else {
         setResponse({
+          formSave: false,
           type: 'succes',
           message: responseEnv.message
         })
       }
     } catch (err) {
       setResponse({
+        formSave: false,
         type: 'error',
         message: "Dados NÃO enviados com sucesso!"
       })
@@ -55,7 +60,10 @@ export default function Orcamento() {
         <h1>Orçamento</h1>
       </div>
       <div className='flex justify-center p-4 font-light italic text-sm'>
-        <p>{response.message}</p>
+        <div>
+        {response.type === 'error' ? <p className='text-red-600'> {response.message}</p>: ''}
+        {response.type === 'succes' ? <p className='text-blue-600'> {response.message}</p>: ''}
+        </div>
       </div>
       <section className="flex justify-center items-center w-1/3 mx-auto">
 
@@ -129,8 +137,9 @@ export default function Orcamento() {
               onChange={onChangeInput}
             ></textarea>
           </div>
-          <div className="w-full bg-blue-500 rounded-lg py-2 text-center text-gray-50 font-semibold tracking-wide">
-            <button type="submit">Solicitar</button>
+          <div>
+            {response.formSave ? <button className="w-full bg-red-500 rounded-lg py-2 text-center text-gray-50 font-semibold tracking-wide" type="submit" disabled>Enviando...</button> : <button className="w-full bg-blue-500 rounded-lg py-2 text-center text-gray-50 font-semibold tracking-wide" type="submit">Solicitar</button>}
+            
           </div>
         </form>
       </section>
